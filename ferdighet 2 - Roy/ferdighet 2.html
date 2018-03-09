@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    
+    <h1>hvor holder vi til?</h1>
+    <div id="alternativ1" onclick="doIt()">Oslo</div>
+    <div id="alternativ2" onclick="riktig()">Larvik</div>
+    <div id="alternativ3" onclick="doIt()">Tromsø</div>
+    <div id="resultat" onclick="blank()"></div>
+        
+<script type="text/javascript">
+    function doIt() {
+        document.getElementById('resultat').innerHTML = 'feil! prøv igjen';
+        console.log(resultat);
+    }
+    function riktig() {
+        document.getElementById('resultat').innerHTML = 'Riktig!';
+        console.log(resultat);
+    }
+    function blank() {
+        document.getElementById('resultat').innerHTML = '';
+        
+    }
+</script>
+</body>
+</html>
