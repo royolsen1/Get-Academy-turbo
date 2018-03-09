@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="blah!" onmouseover="skriv()" onmouseout="skriv2()" oncontextmenu="rightclick()">her</div>
+    <div id="skrevet"></div>
+    <input type="text" oninput="test()" />
+    <script>
+        function skriv() {
+            document.getElementById('skrevet').innerHTML += '<li>dro over</li>';
+        }
+        function skriv2() {
+            document.getElementById('skrevet').innerHTML += '<li>dro ut</li>';
+        }
+        function rightclick() {
+            document.getElementById('skrevet').innerHTML += '<li>høyreklikket</li>'
+        }
+        console.log(skrevet);
+
+        function test() {
+            document.getElementById('skrevet').innerHTML += "<li>noe ble skrevet</li>";
+            console.log(test);
+        }
+    </script>
+
+</body>
+</html>

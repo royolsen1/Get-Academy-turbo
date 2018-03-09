@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        table {
+            border: solid;
+            border-width: 2px;
+            border-color: black;
+        }
+        td {
+            border: solid;
+            border-width: 2px;
+            border-color: black;
+        }
+        tr {
+            border: solid;
+            border-width: 2px;
+            border-color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td onmouseover="hei(this)" onclick="hei2(this)" onmouseout="hei2(this)">o</td>
+            <td onmouseover="hei(this)" onclick="hei2(this)">o</td>
+        </tr>
+        <tr>
+            <td onmouseover="hei(this)" onclick="hei2(this)">o</td>
+            <td onmouseover="hei(this)" onclick="hei2(this)">o</td>
+        </tr>
+        <tr>
+            <td onmouseover="hei(this)" onclick="hei2(this)">o</td>
+            <td onmouseover="hei(this)" onclick="hei2(this)">o</td>
+        </tr>
+        <tr>
+            <td onmouseover="hei(this)" onclick="hei2(this)">o</td>
+            <td onmouseover="hei(this)" onclick="hei2(this)">o</td>
+        </tr>
+ 
+    </table>
+
+    <script type="text/javascript">
+    function hei(td) {
+        td.innerHTML = 'x';
+        
+        }
+        function hei2(derp) {
+            derp.innerHTML = 'A';
+        }
+
+</script>
+</body>
+</html>
