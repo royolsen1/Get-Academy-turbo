@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>What is the world's longest river?</p>
+    <p id="right" onclick="rightAnswer(this)">1. Amazon</p>
+    <p id="wrongOne" onclick="wrongAnswer(this)">2. Nile</p>
+    <p id="wrongTwo" onclick="wrongAnswer(this)">3. Yellow River</p>
+    <button id="test" onclick="reload()">RESET</button>
+    <input type="text" onclick="testOnClick()" oncontextmenu="testOnContextMenu()" onkeydown="testOnKeyDown()" />
+    <h2 id="info"></h2>
+
+    <script>
+
+        function rightAnswer(right) {
+            right.innerHTML = 'Right Answer';
+
+        }
+
+        function wrongAnswer(wrong) {
+            wrong.innerHTML = 'Wrong Answer';
+        }
+
+        function testOnClick() {
+            document.getElementById('info').innerHTML += '<li>onclick</li>';
+            
+        }
+
+        function testOnContextMenu() {
+            document.getElementById('info').innerHTML += '<li>oncontextmenu</li>';
+        }
+
+        function testOnKeyDown() {
+            document.getElementById('info').innerHTML += '<li>onkeydown</li>';
+        }
+
+        function reload() {
+            location.reload();
+        }
+
+
+    </script>
+</body>
+</html>
