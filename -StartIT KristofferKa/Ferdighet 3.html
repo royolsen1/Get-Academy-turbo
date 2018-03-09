@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        td {
+           font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p>Ferdighet 3 - spesialtilfelle, this og gjøre noe med det elementet man trykker på (eller som utløser eventet)</p>
+    Samenlign dette eksempelet med "Ferdighet 2 - Onclick - kjøre funksjon som endrer innerHTML ut fra Id"!
+    <br /><br /><br /><br />
+    <table>
+        <tr>
+            <td onmouseover="yolo(this)"onclick="yolo1(this)">O</td>
+            <td onmouseover="yolo(this)"onclick="yolo1(this)">O</td>
+            <td onmouseover="yolo(this)"onclick="yolo1(this)">O</td>
+        </tr>
+        <tr>
+            <td onmouseover="yolo(this)"onclick="yolo1(this)">O</td>
+            <td onmouseover="yolo(this)"onclick="yolo1(this)">O</td>
+            <td onmouseover="yolo(this)"onclick="yolo1(this)">O</td>
+        </tr>
+    </table>
+    
+
+    <script>
+        function yolo(td) {
+            td.innerHTML = 'X';
+        }
+        function yolo1(td) {
+            td.innerHTML = 'Y';
+        }
+    </script>
+</body>
+</html>

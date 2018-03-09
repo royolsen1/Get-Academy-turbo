@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        button {
+            margin: 10px;
+            padding: 30px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p>Ferdighet 4 - Variabel utenfor funksjon og innenfor funksjon, samt sette sammen tekst av flere deler</p>
+    <button id="en" onclick="riktig2()">1</button>
+    <button id="to" onclick="riktig3()">2</button>
+    <button id="tre" onclick="riktig()">3</button>
+    <br />
+    <button id="fire" onclick="feil()">4</button>
+    <button id="fem" onclick="feil()">5</button>
+    <button id="seks" onclick="feil()">6</button>
+    <br />
+    <button id="syv" onclick="feil()">7</button>
+    <button id="åtte" onclick="riktig1()">8</button>
+    <button id="ni" onclick="feil()">9</button>
+    <br /><br />
+    <div id="info"></div>
+
+    <script>
+        //var getSingleStar = document.getElementById('info').innerHTML = '*';
+        //var getAnotherStar = document.getElementById('info').innerHTML += '*';
+        var Kode1 = 0;
+        function riktig() {
+            document.getElementById('info').innerHTML = Kode1++;
+        }
+
+        function riktig1() {
+        }
+
+        function riktig2() {
+
+        }
+        function riktig3() {
+
+        }
+
+        function feil() {
+            location.reload();
+        }
+            //var tallA = 0;
+            //var tekstA = 'TekstA ';
+            //console.log(tallA, tekstA);
+            //function feil() {
+              //  var tallB = 0;
+                //var tekstB = 'TekstB ';
+                //tallA++;
+                //tallB++;
+                //tekstA += '*';
+                //tekstB += '*';
+                //document.getElementById('info').innerHTML =
+                  //  'TallA=' + tallA +
+                    //'<br/>TallB=' + tallB +
+                    //'<br/>TekstA=' + tekstA +
+                    //'<br/>TekstB=' + tekstB;
+           // }
+    </script>
+</body>
+</html>

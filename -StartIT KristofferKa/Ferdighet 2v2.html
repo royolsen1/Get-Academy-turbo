@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Ferdighet 2 - Onclick => Kjøre funksjon som endrer innerHTML til element ut fra Id</p>
+    <h2 id="a1" onclick="wrong()">Alternativ 1</h2>
+    <h2 id="a2" onclick="correct()">Alternativ 2</h2>
+    <h2 id="a1" onclick="wrong()">Alternativ 3</h2>
+    <h3 id="a3"></h3>
+
+    
+    <script>
+        function wrong() {
+            document.getElementById('a3').innerHTML = 'FEIL';
+            setTimeout(hide, 1000);
+        }
+        function correct() {
+            document.getElementById('a3').innerHTML = 'RIKTIG';
+            setTimeout(hide, 1000);
+        }
+        function hide() {
+            document.getElementById('a3').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

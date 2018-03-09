@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="testOnLoad()">
+    <p>Ferdighet 2a - Alternative eventhandlere: onchange osv.</p>
+    <input type="text" onkeydown="testOnKeyDown()" onchange="testOnChange()" oninput="testOnInput()" />
+    <h3 onclick="testOnClick()" oncontextmenu="testOnContextMenu()">Test test test</h3>
+    <h2 id="info"></h2>
+
+    <a href="https://www.w3schools.com/jsref/dom_obj_event.asp">Mer informasjon her</a>
+    <script>
+        function testOnLoad() {
+            console.log(testOnLoad)
+        }
+        function testOnChange() {
+            console.log(testOnChange)
+        }
+        function testOnInput() {
+            console.log(testOnInput)
+        }
+        function testOnClick() {
+            console.log(testOnClick)
+        }
+        function testOnContextMenu() {
+            console.log(testOnKeyDown)
+        }
+        function testOnKeyDown() {
+            console.log(testOnKeyDown)
+        }
+    </script>
+</body>
+</html>
