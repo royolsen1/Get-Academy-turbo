@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #boxA {
+            height: 40px;
+            width: 40px;
+        }
+
+        #sliderA {
+            height: 30px;
+            width: 50%;
+        }
+
+        #testStuff {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 10px;
+            margin: 10px;
+            font-size: 25px;
+        }
+    </style>
+
+</head>
+<body onload="loadedNow()">
+
+    <div id="testStuff"></div>
+
+    <div id="imgDiv">
+        <img width="550" height="450" id="imgOne" src="https://static.pexels.com/photos/145939/pexels-photo-145939.jpeg" />
+    </div>
+    <input id="boxA" onchange="checkBox()" type="checkbox" value="unchecked" />
+    <input id="sliderA" type="range" oninput="changeThings()" min="0" max="100" value="0" step="1" />
+
+    <script>
+        var getImg = document.getElementById('imgOne');
+        var getDiv = document.getElementById('testStuff');
+        var slider = document.getElementById('sliderA');
+        var box = document.getElementById('boxA');
+        var borderRad = 0;
+        getDiv.innerHTML = 'Hei!';
+        console.log(new Date().toTimeString());
+
+        //var imgDiv = document.getElementById('imgDiv');
+
+        changeThings();
+        function changeThings() {
+            borderRad = slider.value;
+
+            getImg.style.borderRadius = borderRad + 'px';
+
+
+            //var imgSize = slider.value;
+            //var boxC = box.value;
+            //var widthA = 'width' + imgSize + 'px';
+            //var heightA = 'height' + imgSize + 'px';
+
+            //getDiv.innerHTML = borderRadius + '<div>' + widthA + ' > ' + heightA + '</div>';
+
+        }
+
+
+        function checkBox() {
+            if (box.checked) {
+                getImg.style.border = "5px solid black"
+            } else { //if (getImg.style.border = 'none') {
+                getImg.style.border = 'none';
+            }
+        }
+
+        function loadedNow() {
+
+            document.getElementById('testStuff').innerHTML += ' ' + new Date().toTimeString();
+            console.log(new Date().toTimeString());
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>
