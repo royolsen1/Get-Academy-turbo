@@ -8,7 +8,7 @@
         body {
             height: 275px;
             width: 550px;
-            background-color: black;
+            /*background-color: black;*/
             margin-left: 40%;
             margin-right: 50%;
         }
@@ -20,65 +20,62 @@
             font-size: 24px;
             border-radius: 15px;
         }
-        input {
-            width: 500px;
-            height: 100px;
+
+        info {
             font-size: 36px;
+            color: white;
         }
     </style>
 </head>
 <body>
-    <input type="text" />
-    <button id="knapp1" onclick="knapp1()">1</button>
-    <button id="knapp2" onclick="knapp2()">2</button>
-    <button id="knapp3" onclick="knapp3()">3</button>
-    <button id="knapp4" onclick="knapp4()">4</button>
-    <button id="knapp5" onclick="knapp5()">5</button>
-    <button id="knapp6" onclick="knapp6()">6</button>
-    <button id="knapp7" onclick="knapp7()">7</button>
-    <button id="knapp8" onclick="knapp8()">8</button>
-    <button id="knapp9" onclick="knapp9()">9</button>
-    <div id="info"></div>
+
+    <button id="klikker1" onclick="Knapp(this)">1</button>
+    <button id="klikker2" onclick="Knapp(this)">2</button>
+    <button id="klikker3" onclick="Knapp(this)">3</button>
+    <button id="klikker4" onclick="checkcombo(this)">4</button>
+    <button id="klikker5" onclick="checkcombo(this)">5</button>
+    <button id="klikker6" onclick="checkcombo(this)">6</button>
+    <button id="klikker7" onclick="checkcombo(this)">7</button>
+    <button id="klikker8" onclick="Knapp(this)">8</button>
+    <button id="klikker9" onclick="checkcombo(this)">9</button>
+    <button id="klikkerstr" onclick="checkcombo(this)">*</button>
+
     <!--riktig combo: 3812-->
+
+    <div id="info"></div>
+    <div id="feilcombo"></div>
+
     <script>
-       var kode = 3812
+        var combo = document.getElementById("info");
+        var trykket1;
+        var trykket2;
+        var trykket3;
+        var trykket4;
 
-        function knapp1() {
-            document.getElementById("knapp1").style.color = "green";
-            document.getElementById("konsoll").innerHTML += "1"
+
+
+        function Knapp(tall) {
+            trykket4 = trykket3;
+            trykket3 = trykket2;
+            trykket2 = trykket1;
+            trykket1 = tall;
+
+            document.getElementById("info").innerHTML += trykket1.innerHTML;
 
         }
-        function knapp2() {
-            document.getElementById("knapp2").style.color = "green";
+
+        function checkcombo() {
+            if (combo.innerHTML == 3281) {
+                document.getElementById("info").innerHTML = "åpen";
+            }
+            else if (combo.innerHTML != 3281) {
+                
+                combo.innerHTML = "feil";
+
+                location.reload();
+            }
         }
-        function knapp3() {
-            document.getElementById("knapp3").style.color = "green";
-        }
-        function knapp4() {
-            document.getElementById("knapp4").style.color = "red";
-        }
-        function knapp5() {
-            document.getElementById("knapp5").style.color = "red";
-        }
-        function knapp6() {
-            document.getElementById("knapp6").style.color = "red";
-        }
-        function knapp7() {
-            document.getElementById("knapp7").style.color = "red";
-        }
-        function knapp8() {
-            document.getElementById("knapp8").style.color = "green";
-        }
-        function knapp9() {
-            document.getElementById("knapp9").style.color = "red";
-        }
-        function checkCombo() {
-            if (knapp3 && knapp8 && knapp 1 && knapp 2 = true )
-            
-        }
-        function feil() {
-            
-        }
+
     </script>
 </body>
 

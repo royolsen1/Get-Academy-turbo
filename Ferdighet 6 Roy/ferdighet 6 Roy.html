@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <input id="rund" type="checkbox" onchange="rund()" />
+    <input id="slider" type="range" min="1" max="100" value="50" oninput="Size()" />
+    <br />
+    <img id="image" src="asus_asus_rog_pc_gaming_105788_3840x2400.jpg" height="100" width="100">
+
+
+
+
+    <script>
+
+        var image = document.getElementById("image");
+        var check = document.getElementById("rund");
+        var slider = document.getElementById("slider");
+        var borderRadius = 0;
+
+        function rund() {
+            if (check.checked) {
+                image.style.borderRadius = "10px";
+                borderRadius = 10;
+            } else {
+                image.style.borderRadius = "0px";
+                borderRadius = 0;
+            }
+        }
+
+        function Size() {
+            if (slider.value > 50) {
+                borderRadius ++;
+            }
+            else if (slider.value < 50) {
+                borderRadius--;
+            }
+            image.style.borderRadius = borderRadius + "px";
+        }
+    </script>
+</body>
+</html>

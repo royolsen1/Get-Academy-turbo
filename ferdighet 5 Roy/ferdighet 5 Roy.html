@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body onload="clicked()">
+    <div id="klikker1"></div>
+    <img id="image" src="">
+    <input type="checkbox" />
+
+    
+        <script>
+
+            var image = document.getElementById("image");
+
+            document.getElementById('klikker1').innerHTML = 'hei ' + new Date().toTimeString();
+            console.log(new Date().toTimeString())
+            function clicked() {
+                document.getElementById('klikker1').innerHTML = 'hei2 ' + new Date().toTimeString();
+                console.log(klikker1.innerHTML);
+                image.src = "asus_asus_rog_pc_gaming_105788_3840x2400.jpg"
+            }
+        </script>
+</body>
+</html>
