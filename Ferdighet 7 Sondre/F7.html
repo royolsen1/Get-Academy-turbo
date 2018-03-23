@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #divWH {
+            background-color: orangered;
+            font-size: 25px;
+            padding: 5px;
+            margin: 10px;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+        }
+
+        /*#divH {
+            background-color: forestgreen;
+            font-size: 25px;
+            padding: 5px;
+            margin: 10px;
+            height: 100px;
+            width: 100px;
+            text-align: center;
+        }*/
+
+        #both {
+            font-size: 25px;
+            text-align: left;
+           
+        }
+
+        #bothTwo {
+            font-size: 25px;
+            text-align: left;
+        }
+
+        input {
+            width: 40%;
+            height: 40%;
+            margin: 10px;
+        }
+
+        p {
+            font-size: 25px;
+        }
+
+        /*body{
+            overflow: hidden;
+        }*/
+    </style>
+</head>
+<body>
+    <div id="both"></div>
+    <div id="bothTwo"></div>
+
+    <p>Width</p>
+    <input id="sliderW" type="range" min="0" max="1000" value="0" step="1" oninput="sliderDrag()" />
+
+    <p>Height</p>
+    <input id="sliderH" type="range" min="0" max="1000" value="0" step="1" oninput="sliderDrag()" />
+
+    <div id="divWH"></div>
+
+    <!--<div id="divH"></div>-->
+
+    <script>
+        var divWH = document.getElementById('divWH');
+        var divBoth = document.getElementById('both');
+        var divBothTwo = document.getElementById('bothTwo');
+        var sliderWidth = document.getElementById('sliderW');
+        var sliderHeight = document.getElementById('sliderH');
+        var setSize = 0;
+        var two = 2;
+
+        sliderDrag();
+        function sliderDrag() {
+            setSize = sliderWidth.value;
+            divWH.style.width = sliderWidth.value + 'px';
+            setSize = sliderHeight.value;
+            divWH.style.height = sliderHeight.value + 'px';
+
+            divWH.innerHTML = 'Height ' + sliderHeight.value + '<br/>'
+                + 'Width ' + sliderWidth.value;
+
+            divBoth.innerHTML = 'Areal' + '<br/>' + sliderWidth.value * sliderHeight.value + '<br/>' + 'Omkrets';
+            divBothTwo.innerHTML = sliderWidth.value * two + sliderHeight.value * two;
+
+
+
+        }
+
+                                //function sliderDragTwo() {
+
+                                //}
+
+    </script>
+
+</body>
+</html>
