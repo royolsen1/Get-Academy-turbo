@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+
+        #box1, #box2, #box3, #box4, #box5 {
+            height: 40px;
+            width: 40px;  
+                  
+        }
+
+        div {
+            font-size: 25px;
+        }
+
+        .borderstuff {
+            border: 2px solid red;
+            border-radius: 10px;
+        }
+
+        .paddingstuff {
+            padding: 10px;
+        }
+
+        .marginstuff {
+            margin: 20px;
+        }
+
+        .background-colorstuff {
+            background-color: dimgrey;
+        }
+
+        .colorstuff {
+            color: yellow;
+        }
+        .sizestuff{
+            height: 250px;
+            width: 350px;
+        }
+
+        #textStuff{
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        span{
+            display: none;         
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+
+    <span id="thingOne">This div is selected!</span>
+    <div onclick="changeA(this, 'thingOne')">One</div>
+    <hr />
+    <span id="thingTwo">This div is selected!</span>
+    <div onclick="changeA(this, 'thingTwo')">Two</div>
+    <hr />
+    <span id="thingThree">This div is selected!</span>
+    <div onclick="changeA(this, 'thingThree')">Three</div>
+    <hr />
+    <span id="thingFour">This div is selected!</span>
+    <div onclick="changeA(this, 'thingFour')">Four</div>
+    <hr />
+    <span id="thingFive">This div is selected!</span>
+    <div onclick="changeA(this, 'thingFive')">Five</div>
+    <br />
+       
+    <br /><input id="box1" type="checkbox" onclick="kebab(this, 'borderstuff')" /> Border
+    <br /><input id="box2" type="checkbox" onclick="kebab(this, 'paddingstuff')" /> Padding
+    <br /><input id="box3" type="checkbox" onclick="kebab(this, 'marginstuff')" /> Margin
+    <br /><input id="box4" type="checkbox" onclick="kebab(this, 'background-colorstuff')" /> Background-Color
+    <br /><input id="box5" type="checkbox" onclick="kebab(this, 'colorstuff')" /> Color
+
+    <script>
+        var lastDivId = 'thingOne';
+        var lastDivClicked;
+
+        function changeA(divClicked, divThing) {
+            document.getElementById(lastDivId).style.display = 'none';
+            document.getElementById(divThing).style.display = 'inline';
+            lastDivId = divThing;
+            lastDivClicked = divClicked;
+            document.getElementById('box1').checked = lastDivClicked.classList.contains('borderstuff');
+            document.getElementById('box2').checked = lastDivClicked.classList.contains('paddingstuff');
+            document.getElementById('box3').checked = lastDivClicked.classList.contains('marginstuff');
+            document.getElementById('box4').checked = lastDivClicked.classList.contains('background-colorstuff');
+            document.getElementById('box5').checked = lastDivClicked.classList.contains('colorstuff');
+
+        }
+
+        function kebab(checkbox, cssThings) {
+            lastDivClicked.classList.toggle(cssThings, checkbox.checked);
+        }
+       
+    </script>
+
+
+
+</body>
+</html>
